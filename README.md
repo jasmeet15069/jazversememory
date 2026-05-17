@@ -30,6 +30,18 @@ MCP URL:
 http://127.0.0.1:8787/mcp
 ```
 
+Current ngrok URL:
+
+```text
+https://imperceptibly-hymnlike-leesa.ngrok-free.dev/mcp
+```
+
+Smoke test:
+
+```powershell
+python scripts/test_public_mcp.py
+```
+
 ## Deploy Target
 
 Target server:
