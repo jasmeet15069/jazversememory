@@ -1,0 +1,15 @@
+[Unit]
+Description=JazverseMemory MCP Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/jazversememory
+EnvironmentFile=-/etc/jazversememory.env
+ExecStart=/opt/jazversememory/.venv/bin/jazversememory --host 0.0.0.0 --port 8787 --db /var/lib/jazversememory/jazversememory.sqlite3
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

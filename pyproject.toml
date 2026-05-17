@@ -1,0 +1,24 @@
+[project]
+name = "jazversememory"
+version = "0.1.0"
+description = "Persistent context memory MCP server for Jazverse agents."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.27.0",
+    "uvicorn>=0.30.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+jazversememory = "jazversememory.server:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
